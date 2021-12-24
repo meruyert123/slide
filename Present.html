@@ -24,7 +24,7 @@
             display: flex;  
             justify-content: space-around;
             background-color:  rgba(0, 0, 0, 0.753);
-            padding: 10px 200px;
+            padding: 0 200px;
             font-size: 25px;
             color: rgb(255, 255, 255);
         }
@@ -44,10 +44,13 @@
             top: 30%;
             left: 46%;
             font-size: 30px;
+
         }
 
-        #text1, #text2{
+        #text1, #text2, #nazv{
             text-shadow: 0 0 15px rgba(0, 0, 0, 0.705);
+           
+            font-size: 25px;
         }
         
        #nazv{
@@ -62,14 +65,14 @@
 
 <body onload="load()">
     <div class="header">
-        <div id="Meruert"   onclick="change(this)" onclick="window.location.reload()" onmouseover="big(this)" onmouseout="small(this)">Meruert</div>
-        <div id="Gabit"     onclick="change(this)" onmouseover="big(this)" onmouseout="small(this)">Gabit</div>
+        <div id="Meruert"   onclick="change(this)" onclick="window.location.reload()" onmouseover="big(this)" onmouseout="small(this)">Gabit</div>
+        <div id="Gabit"     onclick="change(this)" onmouseover="big(this)" onmouseout="small(this)">Meruert</div>
         <div id="Diana"     onclick="change(this)" onmouseover="big(this)" onmouseout="small(this)">Diana</div>
         <div id="Alikhan"   onclick="change(this)" onmouseover="big(this)" onmouseout="small(this)">Alikhan</div>
     </div>
 
     <div class="main">
-        <img id="img" src="апельсин_вода_пузырьки_оранжевый.jpg" alt="zavtrak" width="400px" style="top: 120px; left: 80px;">
+        <img id="img" src="" alt="" width="400px" style="top: 120px; left: 80px;">
         <div class="text">
             <div id="text3">
                 
@@ -82,9 +85,16 @@
 
     <div class="info">
         <div id="nazv">
-            <h1>How to create Final-Project</h1>
+            <h1 style="color: white ;">How we create Final-Project</h1>
             <hr style="width: 700px; height:2px; border-width:0; color:gray; background-color:gray">
-            <h2>Мы начали проект
+            <h2 style="color: white;     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px; padding: 20px 100px;">Our project was created through blood and sweat.
+                In the first week, we created a plan for what our project would be, and also tried to implement it.
+                In the second week, we started our work, where everything was going very badly, because to realize what we want.
+                In the third week we have already gathered our strength and began to create our website, called AYAQ. <br> <br>
+                We have created our repository:  https://github.com/meruyert123/final <br> <br>
+                Next, we created the link to the site itself: https://meruyert123.github.io/final/ <br> <br>
+                As a result, we have the final fourth week, where we have already created the main page, but we also needed to create additional pages so that the site does not look empty,
+                and this burden fell on Gabit and Alikhan, where they made a page with orders, and Diana and Meruert worked with the Home page and "About us"
             </h2>
         </div>
     </div>
@@ -95,16 +105,16 @@
             var a = element.innerHTML;
             switch(a){
 
-                case "Meruert":
-                document.getElementById("img").src = "mer.jpg";
-                document.getElementById("text1").innerHTML = "Impact on the project";
-                document.getElementById("text2").innerHTML = "";
-                break;
-
                 case "Gabit":
                 document.getElementById("img").src = "mee.jpg";
                 document.getElementById("text1").innerHTML = "Impact on the project";
-                document.getElementById("text2").innerHTML = "I helped with the adaptation of Bootstrap and the use of CSS, as well as amended the idea of ​​the project, which contributed to the progress of the project. ";
+                document.getElementById("text2").innerHTML = "I worked on Shoes and Costume with Alikhan, used Bootstrap and also worked on html. I also worked on the idea for the site and made various changes during the process. Helped others while working on CSS. I also worked on the mobile adaptation of the site and checked the performance of other site elements such as Select, Button, etc.";
+                break;
+
+                case "Meruert":
+                document.getElementById("img").src = "mer.jpg";
+                document.getElementById("text1").innerHTML = "Impact on the project";
+                document.getElementById("text2").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at arcu dictum, varius elit sit amet, tincidunt diam. Nunc dignissim sit amet elit id tempus. Nullam sollicitudin ligula nec elit aliquet, sit amet dapibus nunc porta. Proin maximus sollicitudin urna, ultrices imperdiet orci dictum ac.";
                 break;
 
                 case "Diana":
