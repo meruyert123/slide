@@ -5,8 +5,161 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="лого.ico" />
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            /*background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));*/
+            background: url("https://assets.gq.ru/photos/5d9f47da7fd1f9000820ed26/master/pass/GettyImages-461373553.jpg") no-repeat fixed center;
+            background-size: 100%;
+        }
+
+        .header{
+            display: flex;  
+            justify-content: space-around;
+            background-color:  rgba(0, 0, 0, 0.753);
+            padding: 0 200px;
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+        }
+
+        #Products, #Home, #About, #Contacts, #ico{
+            cursor: pointer;
+        }
+
+        #img{
+            position: relative;
+        }
+
+        .text{
+            opacity: 0;
+            margin: 0;
+            position: absolute;
+            top: 30%;
+            left: 46%;
+            font-size: 30px;
+
+        }
+
+        #text1, #text2, #nazv{
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.705);
+           
+            font-size: 25px;
+        }
+        
+       #nazv{
+           text-align: center;
+           position: relative;
+           top: 350px;
+
+       }
+
+    </style>
 </head>
-<body>
-    <h1>slide</h1>
+
+<body onload="load()">
+    <div class="header">
+        <div id="Meruert"   onclick="change(this)" onclick="window.location.reload()" onmouseover="big(this)" onmouseout="small(this)">Gabit</div>
+        <div id="Gabit"     onclick="change(this)" onmouseover="big(this)" onmouseout="small(this)">Meruert</div>
+        <div id="Diana"     onclick="change(this)" onmouseover="big(this)" onmouseout="small(this)">Diana</div>
+        <div id="Alikhan"   onclick="change(this)" onmouseover="big(this)" onmouseout="small(this)">Alikhan</div>
+    </div>
+
+    <div class="main">
+        <img id="img" src="" alt="" width="400px" style="top: 120px; left: 80px;">
+        <div class="text">
+            <div id="text3">
+                
+         <h1 id="text1" style="font-size: 55 px;">Impact on the project</h1>
+         <p id="text2">Description of what each participant did</p>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="info">
+        <div id="nazv">
+            <h1 style="color: white ;">How we create Final-Project</h1>
+            <hr style="width: 700px; height:2px; border-width:0; color:gray; background-color:gray">
+            <h2 style="color: white;     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px; padding: 20px 100px;">Our project was created through blood and sweat.
+                In the first week, we drew up a plan for what our project would be, and also tried to implement it.
+                In the second week we got down to work, where everything was going very badly, because it was extremely difficult to implement what we wanted.
+                In the third week, we have already gathered strength and started creating our site called "AYAQ". <br> <br>
+                We have created our repository: https://github.com/meruyert123/final <br> <br>
+                Next, we created a link to the site itself: https://meruyert123.github.io/final/ <br> <br>
+                As a result, we have the last fourth week, where we have already created the main page, 
+                supplementing it with several additional pages to make the site look perfect,
+                 we decided to distribute it this way, with the main page and the "About us" page worked Diana and Meruyert, and Gabit and Alikhan worked with the rest("Suits","Shoes");
+            </h2>
+        </div>
+    </div>
+    
+
+    <script>
+        function change(element){
+            var a = element.innerHTML;
+            switch(a){
+
+                case "Gabit":
+                document.getElementById("img").src = "mee.jpg";
+                document.getElementById("text1").innerHTML = "Impact on the project";
+                document.getElementById("text2").innerHTML = "Gabit and Alikhan worked on the Shoes and Suits pages, used Bootstrap, and also worked on html using github. Аlso worked on the idea of these pages so that the person who is viewing the site can conveniently select them for itself and view the full information about this product using different iterations. Helped Diana and Meruert while working on the bootstrap. We also worked on the mobile adaptation of the site and checked the operability of other site elements such as Select, Button, etc.";
+                break;
+
+                case "Meruert":
+                document.getElementById("img").src = "mer.jpg";
+                document.getElementById("text1").innerHTML = "Impact on the project";
+                document.getElementById("text2").innerHTML = "Meruert and Diana worked on the main page where they came up with the main design of the site, how it will look or how the user will be able to view the site and the store's products called AYAQ in a comfortable system. We used the downloaded bootstraps as it is clearly more convenient to make our site complete for use, since all the classes that we needed are stored there. We used Boostrap,JS,HTML,CSS for the main page and also our creativity.";
+                break;
+
+                case "Diana":
+                document.getElementById("img").src = "diana1.jpg";
+                document.getElementById("text1").innerHTML = "Impact on the project";
+                document.getElementById("text2").innerHTML = "Meruert and Diana worked on the main page where they came up with the main design of the site, how it will look or how the user will be able to view the site and the store's products called AYAQ in a comfortable system. We used the downloaded bootstraps as it is clearly more convenient to make our site complete for use, since all the classes that we needed are stored there. We used Boostrap,JS,HTML,CSS for the main page and also our creativity.";
+                break;
+
+                case "Alikhan":
+                document.getElementById("img").src = "ali.jpg";
+                document.getElementById("text1").innerHTML = "Impact on the project";
+                document.getElementById("text2").innerHTML = "Gabit and Alikhan worked on the Shoes and Suits pages, used Bootstrap, and also worked on html using github. Аlso worked on the idea of these pages so that the person who is viewing the site can conveniently select them for itself and view the full information about this product using different iterations. Helped Diana and Meruert while working on the bootstrap. We also worked on the mobile adaptation of the site and checked the operability of other site elements such as Select, Button, etc.";
+                break;
+
+            }
+            
+            
+            $("#text3").animate({ opacity: '0.4'}, "fast" );
+            // $("#text3").animate({ opacity: '0.6'}, "fast" );
+            // $("#text3").animate({ opacity: '0.8'}, "fast" );
+            $("#text3").animate({ opacity: '1'}, "fast");
+
+            
+        }
+
+        document.getElementById("text2").style.color = "white";
+        document.getElementById("text1").style.color = "white";
+        
+        $(".img")////////////////////////
+        
+
+        function big(element){
+            element.style.fontSize = "30px";
+        }
+
+        function small(element){
+            element.style.fontSize = "25px";
+        }
+
+        function load(){
+            $(".text").animate({opacity: '1'}, "slow");
+        }
+    </script>
+    
 </body>
 </html>
+
